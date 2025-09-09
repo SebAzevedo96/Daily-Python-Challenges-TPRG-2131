@@ -1,0 +1,28 @@
+# TPRG Fall 2025 sebastian Azevedo
+#daily excercises - second script (Refactoring)
+# original work, references are here cited:
+#     
+#
+#
+
+
+
+
+
+def get_positive_value(message):
+    value = float(input(message))
+    while value <= 0.0:
+        value = float(input("The value must be greater than zero\n"
++ message))
+    return value
+
+while True:
+    R1 = get_positive_value("What is R1 in ohms? ")
+    R2 = get_positive_value("What is R2 in ohms? ")
+    
+    series = R1 + R2
+    
+    parellel = (R1*R2)/(R1 + R2)
+    
+    print("R1 in series with R2 is:", series , "ohms")
+    print("R1 in parellel with R2 is:", parellel , "ohms")
